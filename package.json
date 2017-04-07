@@ -1,0 +1,25 @@
+{
+  "name": "nimbus-service",
+  "version": "1.0.0",
+  "description": "Stores a queue of objects and returns them as JSON",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint app.js",
+    "auto-start": "nodemon --exec \"npm run lint && npm start\" --ignore public/js",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "start": "babel-node index.js"
+  },
+  "author": "Steve Trefethen",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^7.2.1",
+    "eslint": "^3.19.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "method-override":"*",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "stackjs": "^0.1.0"
+  }
+}
