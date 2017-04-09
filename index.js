@@ -8,7 +8,6 @@ app.use(bodyParser.json());
 var queue = [];
 
 app.get('/', function (req, res) {
-   console.log("GET request for a testbed");
     if (queue.length == 0)
         res.send(404);
     else {
@@ -26,14 +25,12 @@ app.get('/', function (req, res) {
 })
 
 app.get('/size', function (req, res) {
-    console.log("GET request for stack size");
     res.send(queue.length.toString());
 })
 
 app.post('/', function (req, res) {
     console.log(req.body);
     queue.push(req.body);
-    console.log("Got a POST request for the homepage");
     res.send('added');
 })
 
