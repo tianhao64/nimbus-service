@@ -1,6 +1,5 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var Stack = require('stackjs');
 
 var app = express();
 
