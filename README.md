@@ -7,7 +7,7 @@ Caches testbedInfo.json files and returns the 4 IP addresses (vc, esx1, esx2, nf
 
 ## Examples
 
-POST a testbedInfo.json file:
+POST a testbedInfo.json for vSphere 6.5 (note version=65 query param):
 
     $ curl -vX POST http://localhost:8080/?version=65 -d "@testbedInfo.json" --header "Content-Type: application/json"
     * Rebuilt URL to: http://localhost:8080/
