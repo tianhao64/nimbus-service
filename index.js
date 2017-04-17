@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var PropertiesReader = require('properties-reader');
-var properties = PropertiesReader('settings.cfg');
+var properties = PropertiesReader(__dirname + '/settings.cfg');
 
 var queueSize = properties.get('main.queue.size');
 
