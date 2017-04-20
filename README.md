@@ -15,16 +15,21 @@ POST a testbedInfo.json for vSphere 6.5 (note version=65 query param):
     * Connection #0 to host localhost left intact
     added
 
-GET most recently POSTed "65" testbed:
+GET the first "65" testbed in the queue:
 
     $ curl http://localhost:8080/?version=65
     {
-        "testbed_name":"testbed-rtm-1",
-        "vc":"10.160.57.109",
-        "esx1":"10.160.62.58",
-        "esx2":"10.160.46.234",
-        "nfs":"10.160.60.42"
-    }
+        type: "test-vpx-2esx-virtual-pxeBoot-vcva",
+        name: "sdk-testbed-85",
+        user_name: "svc.vmware",
+        podname: "sc-prd-vc042",
+        vc: [
+            {
+                name: "svc.vmware-sdk-testbed-85.vc.0",
+                ip: "10.192.35.65",
+                ip4: "10.192.35.65",
+                ...
+     }
 
 GET the size of all queues:
 
