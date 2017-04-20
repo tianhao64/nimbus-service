@@ -24,13 +24,7 @@ app.get('/', function (req, res) {
     if (query_version in queues && queues[query_version].length > 0) {
         var testbed = queues[query_version][0];
         queues[query_version] = queues[query_version].slice(1, queues[query_version].length);
-        config = {
-            testbed_name: testbed.name,
-            vc: testbed.vc[0].ip,
-            esx1: testbed.esx[0].ip,
-            esx2: testbed.esx[1].ip,
-            nfs: testbed.nfs[0].ip
-        };
+        config = testbed;
     }
     res.json(config);
 });
