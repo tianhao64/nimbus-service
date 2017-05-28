@@ -5,7 +5,7 @@ var app = express();
 
 app.use(bodyParser.json());
 
-var file = 'testbeds.json';
+var file = '/tmp/testbeds.json';
 queues = jsonfile.readFileSync(file);
 
 app.get('/', function (req, res) {
