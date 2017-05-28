@@ -15,7 +15,7 @@ POST a testbedInfo.json for vSphere 6.5 (note version=65 query param):
     * Connection #0 to host localhost left intact
     added
 
-GET the first "65" testbed in the queue:
+Claim the first "65" testbed in the queue:
 
     $ curl http://localhost:8080/?version=65
     {
@@ -40,6 +40,10 @@ Peek at queues:
 
     $ curl http://localhost:8080/peek
     { ... }
+
+Delete a testbed with name "testbed_100" from the queues:
+
+    $ curl -vX DELETE http://localhost:8080/?name=testbed_100
 
 About:
 

@@ -21,6 +21,6 @@
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "stackjs": "^0.1.0",
-    "properties-reader":"*"
+    "jsonfile":"*"
   }
 }
